@@ -53,6 +53,7 @@ body {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
+    cursor: pointer;
 }
 
 .nav-links li a:hover {
@@ -287,6 +288,7 @@ body {
 
 .footer-links li {
     list-style-type: none;
+    cursor: pointer;
 }
 
 .footer-links li a:hover {
@@ -356,6 +358,10 @@ body {
     margin-right: 0.5rem;
     color: #00d4ff;
 }
+.footer-contact a{
+    text-decoration: none;
+    color: #ffffff;
+}
 
 .footer-bottom {
     margin-top: 2rem;
@@ -392,10 +398,10 @@ body {
 }
 
 .navbar,
-.hero,
-.about,
-.services,
-.portfolio,
+.inicio,
+.acerca,
+.servicio,
+.portafolio,
 .footer {
     animation: fadeIn 1.5s ease-in;
 }
@@ -412,21 +418,21 @@ body {
         flex-direction: column;
         align-items: center;
         position: absolute;
-        top: 100px; /* Ajusta según la altura de tu navbar */
+        top: 100px;
         right: 0;
         background-color: rgba(0, 0, 0, 0.9);
         width: 100%;
         padding: 1rem 0;
-        transform: scaleY(0); /* Colapsar verticalmente al inicio */
-        transform-origin: top; /* Punto de origen de la transformación */
-        transition: transform 0.5s ease-out, opacity 0.5s ease-out; /* Transición suave */
-        opacity: 0; /* Opacidad inicial */
-        z-index: 1000; /* Asegura que esté por encima de otros elementos */
+        transform: scaleY(0); 
+        transform-origin: top; 
+        transition: transform 0.5s ease-out, opacity 0.5s ease-out; 
+        opacity: 0; 
+        z-index: 1000; 
     }
 
     .menu-checkbox:checked + .menu-icon + .nav-links {
-        transform: scaleY(1); /* Expandir verticalmente el menú */
-        opacity: 1; /* Opacidad completa * Opacidad completa */
+        transform: scaleY(1);
+        opacity: 1; 
     }
     
 
