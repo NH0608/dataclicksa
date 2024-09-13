@@ -24,6 +24,17 @@ body {
     z-index: 1000;
     backdrop-filter: blur(5px);
 }
+.menu-checkbox {
+    display: none; /* Ocultar el checkbox */
+}
+
+.menu-icon {
+    display: none; /* Ocultar el icono de menú por defecto */
+    font-size: 2rem;
+    color: #00d4ff;
+    cursor: pointer;
+    z-index: 1001; /*/* Asegura que esté por encima del menú desplegable */
+}
 
 .logo img {
     height: 50px;
@@ -387,4 +398,79 @@ body {
 .portfolio,
 .footer {
     animation: fadeIn 1.5s ease-in;
+}
+@media (max-width: 768px) {
+    .navbar{
+        position:relative;
+    }
+    .menu-icon {
+        display: block; /* Mostrar el icono de menú en pantallas pequeñas */
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 100px; /* Ajusta según la altura de tu navbar */
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        padding: 1rem 0;
+        transform: scaleY(0); /* Colapsar verticalmente al inicio */
+        transform-origin: top; /* Punto de origen de la transformación */
+        transition: transform 0.5s ease-out, opacity 0.5s ease-out; /* Transición suave */
+        opacity: 0; /* Opacidad inicial */
+        z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    }
+
+    .menu-checkbox:checked + .menu-icon + .nav-links {
+        transform: scaleY(1); /* Expandir verticalmente el menú */
+        opacity: 1; /* Opacidad completa * Opacidad completa */
+    }
+    
+
+    .inicio h1 {
+        font-size: 2.5rem;
+    }
+
+    .inicio button {
+        font-size: 1rem;
+    }
+
+    .acerca-content, .servicio-item {
+        width: 90%;
+    }
+    .servicio-lista {
+        flex-direction: column; /* Cambia la dirección a columna */
+        align-items: center; /* Centra los elementos */
+    }
+    
+    .servicio-item {
+        width: 90%; /* Ajusta el ancho para que ocupe la mayor parte de la pantalla */
+        margin-bottom: 1.5rem; /* Espacio inferior entre los elementos */
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .inicio h1 {
+        font-size: 2rem;
+    }
+
+    .inicio button {
+        font-size: 0.9rem;
+    }
+
+    .acerca-content, .servicio-item {
+        width: 100%;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
 }
