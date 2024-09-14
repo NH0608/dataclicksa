@@ -1,0 +1,153 @@
+body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 36, 61, 0.8)), url('img/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            backdrop-filter: blur(5px);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #00d4ff;
+        }
+
+        /* Contenedor principal */
+        .login-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.85);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+            width: 90%;
+            height: 70%;
+            max-width: 1000px;
+            transition: transform 0.3s ease;
+        }
+
+
+        /* Estilo del logo */
+        .login-container .logo {
+            width: 45%;
+        }
+
+        .login-container .logo img {
+            max-width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 10px #00d4ff);
+        }
+
+        /* Estilo del formulario */
+        .login-form {
+            width: 50%;
+            padding-left: 2rem;
+            color: #ffffff;
+        }
+
+        .login-form h2 {
+            margin: 0;
+            margin-bottom: 2rem;
+            font-size: 32px;
+            color: #00d4ff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Etiquetas del formulario */
+        .login-form label {
+            display: block;
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+            font-size: 18px;
+            color: #00d4ff;
+        }
+        .login-form .registro{
+            display: block;
+            margin-top: 1rem;
+            font-weight: bold;
+            font-size: 18px;
+            color: #00d4ff;
+        }
+
+        /* Campos del formulario */
+        .login-form input[type="text"], .login-form input[type="password"] {
+            width: 90%;
+            padding: 12px;
+            margin: 0.5rem 0;
+            border: none;
+            border-radius: 8px;
+            background-color: rgba(0, 36, 61, 0.9);
+            color: #00d4ff;
+            font-size: 18px;
+            outline: none;
+            box-shadow: 0 0 10px rgba(0, 36, 61, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        /* Efecto de foco en los campos del formulario */
+        .login-form input[type="text"]:focus, .login-form input[type="password"]:focus {
+            background-color: rgba(0, 36, 61, 0.95);
+            box-shadow: 0 0 15px #00d4ff;
+        }
+
+        /* Estilo del botón de enviar */
+        .submit{
+            text-align: center;
+            
+        }
+        .login-form input[type="submit"] {
+            width: 80%;
+            padding: 12px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 8px;
+            background-color: #00d4ff;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        /* Efecto hover en el botón de enviar */
+        .login-form input[type="submit"]:hover {
+            background-color: #ffffff;
+            color: #00d4ff;
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #00d4ff;
+        }
+
+        /* Enlace olvidado la contraseña */
+        .login-form .forgot-password {
+            display: block;
+            margin-top: 1rem;
+            font-size: 16px;
+            text-align: right;
+            color: #00d4ff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .login-form .forgot-password:hover {
+            color: #ffffff;
+        }
+
+        /* Media queries para pantallas pequeñas */
+        @media (max-width: 768px) {
+            .login-container {
+                flex-direction: column;
+                padding: 1.5rem;
+                width: 90%;
+            }
+
+            .login-container .logo, .login-form {
+                width: 100%;
+                padding: 0;
+            }
+
+            .login-form {
+                padding-top: 2rem;
+            }
+        }
