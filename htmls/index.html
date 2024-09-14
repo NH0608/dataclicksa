@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataClick</title>
+    <link rel="stylesheet" href="/estilos/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="img/17c1b7cee879ff23cc8c43cad9b5423d_fit.png" type="image/png" sizes="16x16">
+    <script src="/script.js"></script>
+</head>
+
+<body>
+    <!-- Encabezado -->
+    <header>
+        <header>
+            <nav class="navbar">
+                <div class="left-section">
+                    <div class="logo">
+                        <img src="/img/logo.png" alt="Logotipo">
+                    </div>
+                    <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+                    <label for="menu-toggle" class="menu-icon">
+                        <i class="fas fa-bars"></i>
+                    </label>
+                    <ul class="nav-links">
+                        <li onclick="document.getElementById('sobre-nosotros').scrollIntoView({behavior: 'smooth'});"><a>Sobre Nosotros</a></li>
+                        <li class="desplegable">
+                            <a href="#" onclick="document.getElementById('servicios').scrollIntoView({behavior: 'smooth'});">Servicios</a>
+                            <ul class="menu-desplegable">
+                                <li><a href="#">Automatización de Procesos</a></li>
+                                <li><a href="#">Asistente Virtual</a></li>
+                                <li><a href="#">Análisis de Datos</a></li>
+                            </ul>
+                        </li>
+                        <li onclick="document.getElementById('portafolio').scrollIntoView({behavior: 'smooth'});">
+                            <a>Portafolio</a>
+                        </li>
+                        <li onclick="document.getElementById('contactos').scrollIntoView({behavior: 'smooth'});">
+                            <a>Contactos</a>
+                        </li>
+                        <div class="user">
+                            <li class="user-links">
+                                <a href="login.html" target="blank">Ingresar</a>
+                            </li>
+                            <li class="user-links">
+                                <a href="#">Inscribirse</a>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+                <div class="right-section">
+                    <!-- Puedes dejar esta sección vacía o eliminarla si no es necesaria -->
+                </div>
+            </nav>
+            
+            
+            <section class="inicio">
+                <div class="inicio-content">
+                    <h1>Automatización y Análisis de Datos</h1>
+                    <button
+                        onclick="document.getElementById('sobre-nosotros').scrollIntoView({behavior: 'smooth'});">Conócenos</button>
+                </div>
+            </section>
+        </header>
+
+        <!-- Sobre Nosotros -->
+        <section id="sobre-nosotros" class="acerca">
+            <h2>Sobre Nosotros</h2>
+            <div class="acerca-content">
+                <p>Somos una empresa que simplifica el acceso y la comprensión de datos a través de tecnologías
+                    avanzadas.
+                    Nos enfocamos en soluciones que <span>agilizan</span> el <strong>análisis de datos</strong>, la
+                    <strong>automatización de procesos</strong> y la implementación de <strong>agentes
+                        virtuales</strong>.
+                    Nuestra misión es <em>democratizar la información</em>, eliminando barreras y proporcionando
+                    herramientas intuitivas para que nuestros clientes <span>tomen decisiones</span> eficientes y
+                    oportunas.
+                </p>
+                <div class="img-nosotros"><span><img src="/img/nosotros.jpg" alt="Equipo de Data Click"></span></div>
+            </div>
+        </section>
+
+        <!-- Servicios -->
+        <section id="servicios" class="servicio">
+            <h2>Servicios</h2>
+            <div class="servicio-lista">
+                <div class="servicio-item">
+                    <img src="/img/procesos.jpg" alt="">
+                    <h3 class="titulo">Automatización</h3>
+                    <h3>de Procesos</h3>
+                </div>
+                <div class="servicio-item">
+                    <img src="/img/asistente.png" alt="">
+                    <h3 class="titulo">Asistente</h3>
+                    <h3>Virtual</h3>
+                </div>
+                <div class="servicio-item">
+                    <img src="/img/datos.jpg" alt="">
+                    <h3 class="titulo">Análisis</h3>
+                    <h3>de Datos</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portafolio -->
+        <section id="portafolio" class="portafolio">
+            <h2>Portafolio</h2>
+            <div class="portafolio-item">
+                <img src="/img/portafolio.jpeg" alt="Proyectos realizados por Data Click">
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <footer id="contactos" class="footer">
+            <div class="footer-content">
+                <div class="footer-acerca">
+                    <h2>Data Click</h2>
+                    <br>
+                    <p>Automatización y análisis de datos para un futuro más eficiente. Simplificamos el acceso a la
+                        información con tecnologías avanzadas.</p>
+                </div>
+                <div class="footer-links">
+                    <h2>Enlaces Rápidos</h2>
+                    <br>
+                    <ul>
+                        <li onclick="document.getElementById('sobre-nosotros').scrollIntoView({behavior: 'smooth'});">
+                            <a>Sobre Nosotros</a>
+                        </li>
+                        <li onclick="document.getElementById('servicios').scrollIntoView({behavior: 'smooth'});""><a>Servicios</a></li>
+                <li onclick=" document.getElementById('portafolio').scrollIntoView({behavior: 'smooth' });">
+                            <a>Portafolio</a>
+                        </li>
+                        <li onclick="document.getElementById('contactos').scrollIntoView({behavior: 'smooth'});">
+                            <a>Contactos</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h2>Contactos</h2>
+                    <br>
+                    <p><i class="fas fa-phone"></i> +57 316 5774926</p>
+                    <p><i class="fab fa-whatsapp"></i><a href="https://wa.me/573165774926" target="_blank">Enviar
+                            mensaje a
+                            WhatsApp</a></p>
+                    <p><i class="fas fa-envelope"></i><a href="mailto: info@dataclicksa.com"> info@dataclicksa.com</a>
+                    </p>
+                    <p><i class="fas fa-map-marker-alt"></i><a href="javascript:void(0);" onclick="openMap();">Cali -
+                            Colombia</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2024 Data Click. Todos los derechos reservados.
+            </div>
+        </footer>
+
+</body>
+
+</html>
